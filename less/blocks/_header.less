@@ -1,0 +1,81 @@
+.header {
+    padding-top: 75px;
+    padding-bottom: 250px;
+
+    @media (min-width: 1200px) {
+        background-image: url("../img/header/bg-line.jpg");
+        background-position: center;
+        background-repeat: repeat-y; 
+    }
+}
+
+.header__content {
+    position: relative;    
+}
+
+.header__content-row {
+    max-width: 290px;
+    text-align: center;
+
+    // для планшетов и выше
+    @media (min-width: 768px) {
+        max-width: 300px;
+        text-align: unset;
+    }
+    // для десктопов
+    @media (min-width: 1200px) {
+        max-width: 585px;
+    }
+    
+}
+
+.header__content-title {
+    margin-bottom: 15px;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    // для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    // для десктопов
+    @media (min-width: 768px) {
+        font-size: 90px;        
+    }
+}
+
+.header__content-text {
+    margin-bottom: 30px;
+    // max-width: 480px;
+}
+
+.header__content-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__content-my-photo {
+    position: relative;
+    width: 457px;
+    z-index: 2;
+ 
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translate(20%, -80%);
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+        z-index: -1;
+    }
+}
+
+.header__photo-bg {       
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: -130px;
+    z-index: 0;
+}
